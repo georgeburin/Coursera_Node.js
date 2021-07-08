@@ -1,0 +1,24 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "\"This is a test directory to learn Git and Node",
+  "main": "index.html",
+  "scripts": {
+    "start":"npm run lite",
+    "lite":"lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgeburin/Coursera_Node.js.git"
+  },
+  "author": "George Burin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgeburin/Coursera_Node.js/issues"
+  },
+  "homepage": "https://github.com/georgeburin/Coursera_Node.js#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
