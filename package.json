@@ -4,8 +4,8 @@
   "description": "\"This is a test directory to learn Git and Node",
   "main": "index.html",
   "scripts": {
-    "start":"npm run lite",
-    "lite":"lite-server",
+    "start": "npm run lite",
+    "lite": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +20,10 @@
   "homepage": "https://github.com/georgeburin/Coursera_Node.js#readme",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
   }
 }
