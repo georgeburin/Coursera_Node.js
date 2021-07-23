@@ -4,7 +4,7 @@
   "description": "\"This is a test directory to learn Git and Node",
   "main": "index.html",
   "scripts": {
-    "sass": "node-sass -w sass/ -o css/"
+    "sass": "node-sass -w sass/ -o css/",
     "start": "npm install",
     "build": "npm build --output public",
     "lite": "lite-server",
