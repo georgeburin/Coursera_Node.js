@@ -33,9 +33,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
-                <span class="navbar-text">
-                    <a data-bs-toggle="modal" data-bs-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                <span class="navbar-text fa fa-sign-in" id="show-login-modal" type="button">
+                    
+                    Login
+                    
                 </span>
             </div>       
         </div>
@@ -116,7 +117,7 @@
                     -->
                            
                                 <div class="d-grid gap-2 ">
-                                <button onclick="location.href='#inlineRadio1'" type="button" class="btn btn-warning" data-bs-placement="bottom" data-bs-toggle="tooltip" data-bs-html="true" title="Or Call us at <br><strong>+825 12345678</strong>">
+                                <button id="show-modal" type="button" class="btn btn-warning" data-bs-placement="bottom" data-bs-html="true" title="Or Call us at <br><strong>+825 12345678</strong>">
                                     Reserve Table
                                 </button>
                                 </div>
@@ -139,7 +140,7 @@
         </button>
         -->
         <!-- Modal -->
-        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade " id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -204,6 +205,82 @@
     <!-- Modal Test My way-->
 
 
+    <!-- Modal for the reserve table -->
+    <div class="modal fade modal--hidden" id="ReserveTableModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                   <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel">Reserve Table</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <label  class="col-12 col-md-3 col-lg-2 col-form-label">Number of Guests</label>
+
+                            <div class="col-12 col-md-9 col-lg-10">
+                                <div class="col-auto form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="col-auto form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="col-auto form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div>
+                                <div class="col-auto form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                <label class="form-check-label" for="inlineRadio4">4</label>
+                                </div>
+                                <div class="col-auto form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                <label class="form-check-label" for="inlineRadio5">5</label>
+                                </div>
+                                <div class="col-auto form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                                <label class="form-check-label" for="inlineRadio6">6</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-5">
+                            <label for="date" class="col-12 col-md-3 col-lg-2 col-form-label">Section</label>
+                            <div class="col-sm-6">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-success">Non-Smoking</button>
+                                    <button type="button" class="btn btn-danger">Smoking</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="row mb-5">
+                            <label for="date" class="col-12 col-sm-2 col-lg-2 col-form-label">Date and Time</label>
+                            <div class="col-sm-3">
+                                <input type="tel" class="form-control" id="date" name="date" placeholder="Date">
+                                
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="time" class="form-control" id="time" name="time" placeholder="Time">
+                                
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Reserve</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for the reserve table-->
+
+
 
     <div class="container">
 
@@ -249,14 +326,14 @@
             -->
 
             <div class="row-content">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" data-bs-interval="2000">
                         <img src="img/uthappizza.png" class="d-block w-10" alt="...">
                             <div class="row carousel-caption d-none d-md-block ">
                                 <h2>Uthappizza <span class="badge bg-secondary bg-danger">HOT</span> <span class="badge rounded-pill bg-secondary">$4.99</span> </h2>
@@ -267,14 +344,14 @@
                                 </p>
                             </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-bs-interval="2000">
                         <img src="img/buffet.png" class="d-block w-10" alt="...">
                             <div class="row carousel-caption d-none d-md-block ">
                                 <h2 >Weekend Grand Buffet <span class="badge bg-secondary bg-danger">NEW</span></h2>
                                 <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                             </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-bs-interval="2000">
                         <img src="img/alberto.png" class="d-block w-10" alt="...">
                             <div class="row carousel-caption d-none d-md-block ">
                                 <h2>Alberto Somayya</h2>
@@ -283,14 +360,20 @@
                             </div>
                     </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                     </button>
+                    
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span id="carousel-button-icon" class="fa fa-pause"></span>
+                    </button>
+                    
+       
                 </div>
             </div>
         <!--Carusel-->  
@@ -364,7 +447,7 @@
                     <!-- Image -->
                     <img
                         class="d-flex me-3 img-thumbnail align-self-center"
-                        src="img/alberto.png" alt="Alberto Somayya"
+                        src="img/arseniy.png" alt="Alberto Somayya"
                     />
                     <!-- Body -->
                     <div>
@@ -490,17 +573,10 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <!-- this is not what we need 
-          <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> -->
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-    
-    <script>
-       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
-    </script>
-
+    <script src="javascript.js"></script>
+     
 </body>
 
 </html>
